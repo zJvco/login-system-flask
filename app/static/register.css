@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    margin: 0 20px;
+}
+
+.logo a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+form {
+    width: 350px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ccc;
+}
+
+form .input-field {
+    margin: 10px 0;
+}
+
+form .input-field label {
+    display: block;
+}
+
+form .input-field input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    padding: 6px 5px;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+form .submit-field {
+    margin-top: 15px;
+}
+
+form .submit-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.dont-gave-account p a {
+    text-decoration: none;
+    color: blue;
+}
+
+.dont-gave-account p a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Tela Principal</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">Logo</a>
+        </div>
+        <div class="login-system">
+            <ul>
+                {% if current_user.is_authenticated %}
+                    <li>
+                        <a href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                {% else %}
+                    <li>    
+                        <a href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('register') }}">Registre-se</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+    <main>
+        {% if current_user.is_authenticated %}
+            <h1>Bem-vindo a tela principal. {{ current_user.username.title() }}</h1>
+        {% else %}
+            <h1>Bem-vindo a tela principal. Visitante</h1>
+        {% endif %}
+    </main>
+</body>
+</html>

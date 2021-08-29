@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <title>Tela de Registro</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">Logo</a>
+        </div>
+    </header>
+    <form action="{{ url_for('register') }}" method="POST">
+        <div class="input-field">
+            <label>Usuário</label>
+            <input type="text" name="username" id="username" placeholder="Digite o seu usuário">
+        </div>
+        <div class="input-field">
+            <label>E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
+        </div>
+        <div class="input-field">
+            <label>Senha</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+        </div>
+        <div class="submit-field">
+            <input type="submit" value="ENVIAR">
+        </div>
+    </form>
+    <div class="dont-gave-account">
+        <p>Já tem uma conta? <a href="{{ url_for('login') }}">Faça o login</a></p>
+    </div>
+</body>
+</html>
